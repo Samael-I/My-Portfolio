@@ -62,7 +62,7 @@
 
       <div class="bio">
         <h3 class="text-secondary">BIO</h3>
-        <p> Age: 22<br> Weight: 60kg <br>Height: 185cm <br>Nationality: Filipino <br>Skin color: Brown<br> Education: Diploma in Internet Technology  </p>
+	      <p> Age: <span> id="age" </span><br> Weight: 60kg <br>Height: 185cm <br>Nationality: Filipino <br>Skin color: Brown<br> Education: Diploma in Internet Technology  </p>
       </div>
 
       <div class="job job-1">
@@ -93,6 +93,16 @@
   </footer>
 
   <script src="main.js"></script>
+	<script>
+	ar birth = new Date('1997-09-21');
+var now = new Date();
+var difference = now - birth;
+// Dates are set from 1970, so remove that to get the year 
+var age = new Date(difference).getFullYear() - 1970
+
+var span = document.getElementById('age');
+span.innerHTML = age;
+	</script>
 </body>
 
 </html>
