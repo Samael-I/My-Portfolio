@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+<link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="main.css">
+  <title>About Me</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item current">
+          <a href="about.html" class="nav-link">
+            About Me
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">
+            My Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">
+            How To Reach Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="about">
+    <h1 class="lg-heading">
+      About
+      <span class="text-secondary">Me</span>
+    </h1>
+    <h2 class="sm-heading">
+      Let me tell you a few things...
+    </h2>
+    <div class="about-info">
+      <img src="bermel.jpg" alt="Bermel" class="bio-image">
+
+      <div class="bio">
+        <h3 class="text-secondary">BIO</h3>
+	      <p> Age: <span id="age"> </span><br> Weight: 60kg <br>Height: 185cm <br>Nationality: Filipino <br>Skin color: Brown<br> Education: Diploma in Internet Technology <br>
+        Work Experience: Tech Support At <u> <a href="http:\\www.peza.gov.ph">Philippine Economic Zone Authority </a></u> 09/01/21 - <span id="present"></span> (present) </p>
+      </div>
+
+      <div class="job job-1">
+        <h3>Skills</h3>
+        <h6>Web Developement</h6>
+        <div class="progress-bar" data-label="" style="--width: 30"> <h1 class="text-secondary">  Technical </h1> </div><br>
+        <div class="progress-bar" data-label="" style="--width: 85"> <h1 class="text-secondary"> HTML </h1> </div> <br>
+		 <div class="progress-bar" data-label="" style="--width: 60"> <h1 class="text-secondary"> CSS </h1> </div><br>
+		  <div class="progress-bar" data-label="" style="--width: 40"> <h1 class="text-secondary"> JavaScript </h1> </div><br>
+		   <div class="progress-bar" data-label="" style="--width: 20"> <h1 class="text-secondary">  PHP</h1> </div> <br>
+       
+      </br>
+      </div>
+
+      <div class="job job-2">
+        <h3>Professional Experience </h3>
+        <h6>Front End Developer</h6>
+        <p style="text-align:center; font-size:50px;">COMING SOON!</p>
+      </div>
+
+      <div class="job job-3">
+        <h3>Webworks</h3>
+        <h6>Designs</h6>
+        <p style="text-align:center; font-size:50px;">COMING SOON!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="main-footer">
+    Copyright &copy; 2040
+  </footer>
+
+  <script src="main.js"></script>
+	<script>
+	var birth = new Date('1997-09-21');
+var now = new Date();
+var difference = now - birth;
+var age = new Date(difference).getFullYear() - 1970;
+
+var span = document.getElementById('age');
+span.innerHTML = age;
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+var present = document.getElementById('present');
+
+present.innerHTML = today;
+
+	</script>
+</body>
+
+</html>
